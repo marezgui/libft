@@ -6,16 +6,16 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 12:11:33 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/24 05:04:27 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/13 03:31:29 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_cntwd(const char *s, char c)
+static	size_t	ft_cntwd(const char *s, char c)
 {
-	int i;
-	int cnt;
+	int		i;
+	size_t	cnt;
 
 	i = 0;
 	cnt = 0;
@@ -31,10 +31,10 @@ static	int	ft_cntwd(const char *s, char c)
 	return (cnt);
 }
 
-static	int	ft_wdlen(const char *s, char c)
+static	size_t	ft_wdlen(const char *s, char c)
 {
-	int i;
-	int len;
+	int		i;
+	size_t	len;
 
 	i = 0;
 	len = 0;
@@ -48,7 +48,7 @@ static	int	ft_wdlen(const char *s, char c)
 	return (len);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -62,7 +62,7 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (i < ft_cntwd(s, c))
+	while (i < (int)ft_cntwd(s, c))
 	{
 		k = 0;
 		tab[i] = ft_strnew(ft_wdlen(&s[j], c));

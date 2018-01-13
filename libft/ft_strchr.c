@@ -6,7 +6,7 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:36:49 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/21 14:58:47 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/13 22:34:31 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (s[i] == (char)c)
 		{
-			ptr = (char*)s;
+			ptr = (char*)(uintptr_t)s;
 			return (ptr + i);
 		}
 		i++;
 	}
 	if ((char)c == '\0')
 	{
-		ptr = (char*)s;
+		ptr = (char*)(uintptr_t)s;
 		ptr += i;
 	}
 	return (ptr);

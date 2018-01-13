@@ -6,7 +6,7 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 23:01:54 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 14:55:23 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/13 03:26:50 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int i;
+	size_t	i;
 
 	i = ft_strlen(dst);
 	if (i + 1 > size)

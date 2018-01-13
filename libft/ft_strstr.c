@@ -6,7 +6,7 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:22:12 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 10:07:57 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/13 22:24:08 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,12 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		while (haystack[i + y] == needle[y])
 		{
 			if (++y == ft_strlen(needle))
-			{
-				ptr = (char*)haystack;
-				return (ptr + i);
-			}
+				return (ptr = (char*)(uintptr_t)haystack + i);
 		}
 		y = 0;
 		i++;
 	}
 	if (!ft_strlen(needle))
-		ptr = (char*)haystack;
+		ptr = (char*)(uintptr_t)haystack;
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 14:05:14 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 14:57:32 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/13 22:27:59 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			if (++y == ft_strlen(needle))
 			{
-				ptr = (char*)haystack;
+				ptr = (char*)(uintptr_t)haystack;
 				return (ptr + i);
 			}
 		}
@@ -35,6 +35,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		i++;
 	}
 	if (!ft_strlen(needle))
-		ptr = (char*)haystack;
+		ptr = (char*)(uintptr_t)haystack;
 	return (ptr);
 }

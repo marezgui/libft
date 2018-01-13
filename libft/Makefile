@@ -6,13 +6,13 @@
 #    By: marezgui <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 08:40:25 by marezgui          #+#    #+#              #
-#    Updated: 2017/11/25 14:44:23 by marezgui         ###   ########.fr        #
+#    Updated: 2018/01/13 03:32:40 by marezgui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Weverything #-Wall -Wextra -Werror #-Weverything
 
 SRC = ft_sqrt.c ft_div_mod.c ft_strrev.c ft_intlen.c\
 	ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c \

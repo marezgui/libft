@@ -6,7 +6,7 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 08:38:02 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 14:56:23 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/13 03:26:14 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int len;
+	size_t	len;
 
 	len = 0;
 	while (str[len])

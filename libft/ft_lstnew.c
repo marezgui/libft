@@ -6,7 +6,7 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 16:36:46 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/24 05:45:37 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/13 03:06:01 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		link->content = (void*)malloc(sizeof(void) * content_size);
+		link->content = (void*)malloc(content_size);
 		if (!link->content)
 			return (NULL);
 		ft_memcpy(link->content, content, content_size);

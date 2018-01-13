@@ -6,7 +6,7 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 08:16:14 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/21 08:49:58 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/13 03:31:11 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_putnbr_fd(int nb, int fd)
 ** Table ASCII 0-9 -> 48-57
 */
 	else if (nb >= 0 && nb <= 9)
-		ft_putchar_fd('0' + nb, fd);
+		ft_putchar_fd('0' + (char)nb, fd);
 /*
 ** '/'to print only the unit '%'to print only the decade
 */

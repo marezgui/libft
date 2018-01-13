@@ -6,7 +6,7 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 10:25:51 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 14:55:17 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/13 03:27:38 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*j;
-	int		len;
+	size_t	len;
 
 	if (!s1 || !s2)
 		return (NULL);
