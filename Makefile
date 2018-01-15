@@ -6,15 +6,22 @@
 #    By: marezgui <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 08:40:25 by marezgui          #+#    #+#              #
-#    Updated: 2018/01/13 03:32:40 by marezgui         ###   ########.fr        #
+#    Updated: 2018/01/15 09:01:29 by marezgui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+## TARGET
 NAME = libft.a
 
-FLAGS = -Weverything #-Wall -Wextra -Werror #-Weverything
+## COMPILER
+FLAGS = -Weverything
 
-SRC = ft_sqrt.c ft_div_mod.c ft_strrev.c ft_intlen.c\
+## INCLUDES
+INCLUDES = includes/libft.h
+
+## SOURCES
+SRCDIR = srcs/
+SRCFILES = ft_atoi.c ft_sqrt.c ft_div_mod.c ft_strrev.c ft_intlen.c\
 	ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c \
 	ft_memmove.c ft_memset.c ft_bzero.c ft_putstr.c ft_putstr_fd.c ft_strcat.c \
 	ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcpy.c ft_strdel.c ft_strdup.c \
@@ -26,20 +33,35 @@ SRC = ft_sqrt.c ft_div_mod.c ft_strrev.c ft_intlen.c\
 	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_atoi.c \
 	ft_itoa.c ft_tolower.c ft_toupper.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c \
 	ft_lstiter.c ft_lstlen.c ft_lstmap.c ft_lstnew.c
+SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
-OBJS = $(SRC:.c=.o)
+## OBJECTS
+OBJDIR = objs/
+OBJFILES = $(SRCFILES:.c=.o)
+OBJS = $(addprefix $(OBJDIR), $(OBJFILES))
 
-HEADER = libft.h
+###############
+#### RULES ####
+###############
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(FLAGS) -c $(SRC) -I $(HEADER) && ar -q $(NAME) $(OBJS)
+$(NAME): $(OBJDIR) $(OBJS)
+	ar -q $@ $(OBJS)
+	ranlib $@
+
+$(OBJDIR):
+	    mkdir -p $(OBJDIR)
+
+$(OBJDIR)%.o: $(SRCDIR)%.c
+	gcc $(FLAGS) -I $(INCLUDES) -o $@ -c $<
 
 clean:
-	rm -f $(OBJS)
+	rm -rf $(OBJDIR)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
