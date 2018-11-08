@@ -6,7 +6,7 @@
 /*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/13 23:17:11 by marezgui          #+#    #+#             */
-/*   Updated: 2018/01/13 23:17:22 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/01/15 09:38:28 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include "get_next_line.h"
 
 int				ft_atoi(const char *nptr);
 char			*ft_itoa(int n);

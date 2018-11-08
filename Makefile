@@ -6,7 +6,7 @@
 #    By: marezgui <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 08:40:25 by marezgui          #+#    #+#              #
-#    Updated: 2018/01/15 09:01:29 by marezgui         ###   ########.fr        #
+#    Updated: 2018/11/08 09:58:28 by marezgui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ NAME = libft.a
 ## COMPILER
 FLAGS = -Weverything
 
-## INCLUDES
-INCLUDES = includes/libft.h
+## INCLUDE
+INCLUDE = includes/libft.h
 
 ## SOURCES
 SRCDIR = srcs/
@@ -32,7 +32,7 @@ SRCFILES = ft_atoi.c ft_sqrt.c ft_div_mod.c ft_strrev.c ft_intlen.c\
 	ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c \
 	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_atoi.c \
 	ft_itoa.c ft_tolower.c ft_toupper.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c \
-	ft_lstiter.c ft_lstlen.c ft_lstmap.c ft_lstnew.c
+	ft_lstiter.c ft_lstlen.c ft_lstmap.c ft_lstnew.c get_next_line.c
 SRCS = $(addprefix $(SRCDIR), $(SRCFILES))
 
 ## OBJECTS
@@ -47,20 +47,19 @@ OBJS = $(addprefix $(OBJDIR), $(OBJFILES))
 all: $(NAME)
 
 $(NAME): $(OBJDIR) $(OBJS)
-	ar -q $@ $(OBJS)
-	ranlib $@
+	@ar -sq $@ $(OBJS)
 
 $(OBJDIR):
-	    mkdir -p $(OBJDIR)
+	@mkdir -p $(OBJDIR)
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
-	gcc $(FLAGS) -I $(INCLUDES) -o $@ -c $<
+	@gcc $(FLAGS) -I $(INCLUDE) -o $@ -c $<
 
 clean:
-	rm -rf $(OBJDIR)
+	@rm -rf $(OBJDIR)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
