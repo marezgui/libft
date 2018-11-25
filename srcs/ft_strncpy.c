@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marezgui <marezgui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:40:11 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 14:57:18 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/11/11 07:33:57 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,6 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		dst[i] = src[i];
 		i++;
 	}
-	while (i < len)
-	{
-		dst[i] = '\0';
-		i++;
-	}
+	ft_bzero(dst + i, len - i);
 	return (dst);
 }

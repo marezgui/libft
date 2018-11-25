@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marezgui <marezgui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 22:52:13 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/14 22:59:08 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/11/12 14:17:33 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	int isdigit;
-	int isalpha;
-
-	isdigit = ft_isdigit(c);
-	isalpha = ft_isalpha(c);
-	if (isdigit || isalpha)
+	if (ft_isdigit(c) || ft_isalpha(c))
 		return (1);
 	return (0);
 }

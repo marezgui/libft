@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marezgui <marezgui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 19:13:55 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 14:57:25 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/11/12 14:40:07 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ char	*ft_strnew(size_t size)
 	ptr = (char*)malloc((sizeof(char) * size) + 1);
 	if (!ptr)
 		return (NULL);
-	ft_memset(ptr, 0, size + 1);
+	ft_bzero(ptr, size + 1);
 	return (ptr);
 }

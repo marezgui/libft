@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marezgui <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: marezgui <marezgui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 08:40:25 by marezgui          #+#    #+#              #
-#    Updated: 2018/11/08 09:58:28 by marezgui         ###   ########.fr        #
+#    Updated: 2018/11/12 18:34:05 by marezgui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,6 @@ OBJDIR = objs/
 OBJFILES = $(SRCFILES:.c=.o)
 OBJS = $(addprefix $(OBJDIR), $(OBJFILES))
 
-###############
-#### RULES ####
 ###############
 
 all: $(NAME)

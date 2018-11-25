@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marezgui <marezgui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 21:11:14 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 14:54:00 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/11/12 14:43:19 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,5 @@ void	ft_strclr(char *s)
 	i = 0;
 	if (!s)
 		return ;
-	while (s[i])
-	{
-		s[i] = '\0';
-		i++;
-	}
+	ft_bzero(s, ft_strlen(s));
 }

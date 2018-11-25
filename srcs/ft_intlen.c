@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marezgui <marezgui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/25 14:49:46 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 14:49:51 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/11/12 17:47:25 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	ft_intlen(int nb)
 	int i;
 
 	i = 0;
-	if (!nb)
-		i++;
+	if (nb == 0)
+		return (1);
 	if (nb < 0)
 		i++;
 	while (nb)

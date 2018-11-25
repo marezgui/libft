@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marezgui <marezgui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 12:44:46 by marezgui          #+#    #+#             */
-/*   Updated: 2017/12/15 03:04:32 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/11/12 18:08:15 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,3 @@ void	ft_putchar(char c)
 		write(1, &unicode, 2);
 	}
 }
-/*
-**int	main()
-**{
-**	//char c = 'o';
-**	int c = L'ø';
-**
-**	ft_putchar(c);
-**	return (0);
-**}
-*/

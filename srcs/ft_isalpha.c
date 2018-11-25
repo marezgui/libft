@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marezgui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marezgui <marezgui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 21:42:24 by marezgui          #+#    #+#             */
-/*   Updated: 2017/11/25 14:50:10 by marezgui         ###   ########.fr       */
+/*   Updated: 2018/11/09 14:54:50 by marezgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,3 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
-/*
-**int	main(void)
-**{
-**	int test;
-**
-**	test = ft_isalpha(173);
-**	printf("%d", test);
-**	return (0);
-**}
-*/
